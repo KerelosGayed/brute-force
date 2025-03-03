@@ -13,4 +13,3 @@ This project is a brute-force testing tool designed to assess the strength of pa
 - Uses large wordlists for testing password strength.
 - Simple and easy-to-use command-line interface.
 
-## 📂 Project Structure
