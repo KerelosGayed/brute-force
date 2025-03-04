@@ -21,7 +21,7 @@ public class BruteForce {
      */
     static String charCombos(char[] characters, String prefix, int length, 
                              Function<String, Boolean> passwordAttempter, AtomicInteger attempts, 
-                             int totalCombinations, long startTime) {
+                             long totalCombinations, long startTime) {
         if (length == 0) {
             int attemptCount = attempts.incrementAndGet();
             boolean result = passwordAttempter.apply(prefix);
@@ -30,7 +30,7 @@ public class BruteForce {
             if (attemptCount % 1000 == 0) {
                 long elapsedTime = System.currentTimeMillis() - startTime;
                 double progress = (100.0 * attemptCount) / totalCombinations;
-                System.out.printf("Attempts: %d / %d (%.2f%%) | Time elapsed: %.2f seconds%n",
+                System.out.printf("Attempts: %d / %d (%.5f%%) | Time elapsed: %.2f seconds%n",
                         attemptCount, totalCombinations, progress, elapsedTime / 1000.0);
             }
 

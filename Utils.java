@@ -56,17 +56,7 @@ class Utils {
      * @param high Highest allowed value
      * @return Valid user input
      */
-    static int getInt(long targetSin, int low, int high) {
-        int input;
-        
-        do {
-            promptLabel.setText("Please enter value between " + low + " and " + high + ": ");
-            String line = targetSin;
-            input = Integer.parseInt(line);
-        } while (input < low || input > high);
 
-        return input;
-    }
 
     /*
      * Wrapper for System.out.println;

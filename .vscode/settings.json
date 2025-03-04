@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "sevenzipjbinding-16.02-2.01-AllWindows/**/*.jar"
+    ]
+}
