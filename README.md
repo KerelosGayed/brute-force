@@ -13,3 +13,8 @@ This project is a brute-force testing tool designed to assess the strength of pa
 - Uses large wordlists for testing password strength.
 - Simple and easy-to-use command-line interface.
 
+## TO COMPILE:
+Cd into directory
+javac -cp "sevenzipjbinding-16.02-2.01-AllWindows/sevenzipjbinding-16.02-2.01-AllWindows/lib/sevenzipjbinding-AllWindows.jar;sevenzipjbinding-16.02-2.01-AllWindows/sevenzipjbinding-16.02-2.01-AllWindows/lib/sevenzipjbinding.jar" Main.java BruteForce.java Utils.java
+To run:
+java -cp "sevenzipjbinding-16.02-2.01-AllWindows/sevenzipjbinding-16.02-2.01-AllWindows/lib/sevenzipjbinding-AllWindows.jar;sevenzipjbinding-16.02-2.01-AllWindows/sevenzipjbinding-16.02-2.01-AllWindows/lib/sevenzipjbinding.jar;." -Djava.library.path=sevenzipjbinding-16.02-2.01-AllWindows/sevenzipjbinding-16.02-2.01-AllWindows/lib/native Main
