@@ -77,14 +77,15 @@ class Main {
             executor.shutdown();
         }
 
-        executor.awaitTermination(3, java.util.concurrent.TimeUnit.DAYS);
+        executor.awaitTermination(3, java.util.concurrent.TimeUnit.MINUTES);
         scanner.close();
     }
 
     static Boolean usePassword(String filename, String password) {
+        System.out.println(password);
         boolean isSuccess = false;
         try {
-            IInArchive archive = SevenZip.openInArchive(ArchiveFormat.SEVEN_ZIP, new RandomAccessFileInStream(new RandomAccessFile(filename, "r")));
+            IInArchive archive = SevenZip.openInArchive(ArchiveFormat.SEVEN_ZIP, new RandomAccessFileInStream(new RandomAccessFile(filename, "r")), password);
             ISimpleInArchive simpleInArchive = archive.getSimpleInterface();
             for (ISimpleInArchiveItem item : simpleInArchive.getArchiveItems()) {
                 if (!item.isFolder()) {

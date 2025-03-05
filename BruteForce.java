@@ -27,7 +27,7 @@ public class BruteForce {
             boolean result = passwordAttempter.apply(prefix);
 
             // Print progress every 1000 attempts
-            if (attemptCount % 1000 == 0) {
+            if (attemptCount % 100000 == 0) {
                 long elapsedTime = System.currentTimeMillis() - startTime;
                 double progress = (100.0 * attemptCount) / totalCombinations;
                 System.out.printf("Attempts: %d / %d (%.5f%%) | Time elapsed: %.2f seconds%n",
